@@ -1,0 +1,9 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+    <input placeholder="הזנת שאלה" name="query" ngModel required #query="ngModel" list="">
+    <button>שליחה</button>
+  </form>
+
+  <div *ngIf="loading && !answer" class="spinner"></div>
+
+  <p *ngIf="!!query.value?.length">השאלה שלך: {{ query.value }}</p>
+  <p *ngIf="!!answer && !query.value?.length">{{ !!answer.text ? 'התשובה שלך: ' + answer.text : 'לא מצאתי תשובה' }}</p>
