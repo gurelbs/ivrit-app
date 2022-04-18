@@ -11,8 +11,7 @@
     "serve:ssr": "node dist/ivrit/server/main.js",
     "build:ssr": "ng build && ng run ivrit:server",
     "prerender": "ng run ivrit:prerender",
-    "start:heroku": "node dist/ivrit/server/main.js",
-    "heroku-postbuild": "ng build --prod" 
+    "start:heroku": "node dist/ivrit/server/main.js"
   },
   "private": true,
   "dependencies": {
