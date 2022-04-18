@@ -1,1 +1,1 @@
-web: node dist/ivrit/server/main.js
+web: npm run start
