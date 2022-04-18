@@ -1,1 +1,1 @@
-web: npm run start:heroku
+web: node dist/ivrit/server/main.js
