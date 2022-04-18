@@ -11,7 +11,9 @@
     "serve:ssr": "node dist/ivrit/server/main.js",
     "build:ssr": "ng build && ng run ivrit:server",
     "prerender": "ng run ivrit:prerender",
-    "heroku-postbuild": "ng build --prod"
+    "heroku-postbuild": "ng build --prod",
+    "postinstall": "npm run build:ssr",
+    "start:heroku": "node dist/server"
   },
   "private": true,
   "dependencies": {
@@ -48,5 +50,8 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.6.2"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
