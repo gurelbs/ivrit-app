@@ -3,15 +3,15 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "npm run serve:ssr",
+    "start": "node dist/ivrit/server/main.js",
     "build": "npm run build:ssr",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "heroku-postbuild": "npm run build:ssr",
     "dev:ssr": "ng run ivrit:serve-ssr",
     "serve:ssr": "node dist/ivrit/server/main.js",
     "build:ssr": "ng build && ng run ivrit:server",
-    "prerender": "ng run ivrit:prerender",
-    "postinstall": "npm run build:ssr"
+    "prerender": "ng run ivrit-app:prerender"
   },
   "private": true,
   "dependencies": {
