@@ -9,6 +9,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { existsSync } from 'fs';
 import { scraperRouter } from './server/routes/scraper';
 import * as cors from 'cors';
+import { enableProdMode, isDevMode } from '@angular/core';
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
@@ -46,7 +47,9 @@ export function app(): express.Express {
     res.sendStatus(500);
   });
     
-  
+  if (!isDevMode()){
+    enableProdMode();
+  }
   return server;
 }
 
