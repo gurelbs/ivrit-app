@@ -10,7 +10,8 @@
     "dev:ssr": "ng run ivrit:serve-ssr",
     "serve:ssr": "node dist/ivrit/server/main.js",
     "build:ssr": "ng build && ng run ivrit:server",
-    "prerender": "ng run ivrit:prerender"
+    "prerender": "ng run ivrit:prerender",
+    "postinstall": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {
@@ -26,7 +27,6 @@
     "@nguniversal/express-engine": "^13.1.0",
     "cors": "^2.8.5",
     "express": "^4.15.2",
-    "ivrit": "^0.0.23",
     "puppeteer": "^13.5.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
