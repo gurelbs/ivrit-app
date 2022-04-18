@@ -13,7 +13,7 @@
     "prerender": "ng run ivrit:prerender",
     "heroku-postbuild": "ng build --prod",
     "postinstall": "npm run build:ssr",
-    "start:heroku": "node dist/server"
+    "start:heroku": "node dist/ivrit/server/main.js"
   },
   "private": true,
   "dependencies": {
